@@ -171,7 +171,9 @@ document.querySelectorAll('.timeline-item').forEach(item => {
           col+=fres*mix(purple,cyan,0.5+0.3*sin(u_time*0.25))*0.45;
           vec2 texUV=sphereUV(hitPos);vec4 tex=cellTexture(texUV,u_time);
           col+=vec3(0.06,0.1,0.35)*tex.a;
-          col+=tex.rgb*0.45;}
+          col+=tex.rgb*0.45;
+          float fogD=length(hitPos-ro);
+          col=mix(col,vec3(0.8,0.82,0.88),smoothstep(1.2,3.6,fogD)*0.35);}
         col+=glow*mix(purple,cyan,0.4)*0.1;}
       /* Output half-brightness for HDR headroom in UNSIGNED_BYTE FBO */
       gl_FragColor=vec4(col*0.5,1.0);}`;

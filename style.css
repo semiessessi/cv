@@ -306,16 +306,19 @@ ul {
 }
 
 .hero-scroll span {
-  font-size: 0.7rem;
+  font-family: var(--font-pixel);
+  font-size: 0.85rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  color: var(--text);
+  text-shadow: 0 0 8px rgba(108,99,255,0.5);
 }
 
 .hero-scroll-line {
-  width: 1px;
+  width: 2px;
   height: 40px;
-  background: linear-gradient(to bottom, var(--accent), transparent);
+  background: linear-gradient(to bottom, var(--accent-bright), transparent);
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
