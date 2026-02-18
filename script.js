@@ -400,3 +400,4 @@ document.querySelectorAll('.timeline-item').forEach(item => {
   resize();
   requestAnimationFrame(frame);
 })();
+
