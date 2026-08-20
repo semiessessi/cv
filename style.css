@@ -1309,3 +1309,18 @@ ul {
 #demos {
   scroll-margin-top: 24px;
 }
+
+/* Closing line under the experience timeline */
+.timeline-note {
+  margin-top: 40px;
+  padding-left: 40px;
+  max-width: 760px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+  .timeline-note {
+    padding-left: 30px;
+  }
+}
