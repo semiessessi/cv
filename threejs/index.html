@@ -40,7 +40,7 @@
         <h1 class="page-title">Three.js &amp; WebGL</h1>
         <p class="page-lede">Real-time 3D in the browser. Three.js sits on top of WebGL, and WebGL is graphics programming &mdash; which is where I have spent most of the last three decades. The animated surface behind this text is a raytracer I wrote by hand, running live on this page.</p>
         <div class="page-hero-actions">
-          <a href="#demos" class="btn btn-primary">Play the Demos</a>
+          <a href="#demos" class="btn btn-primary">Demos &amp; Games</a>
           <a href="#live" class="btn btn-accent">How This Page Works</a>
         </div>
       </div>
@@ -129,7 +129,7 @@
     </div>
   </section>
 
-  <section class="section experience" id="live">
+  <section class="section section-alt" id="live">
     <div class="container">
       <h2 class="section-title">Live On This Page</h2>
       <p class="section-lede">The background above is not a video or a library demo. It is a raytracer written in GLSL and plain WebGL, with no dependencies, rendering a Chmutov sextic surface in real time. Here is what happens every frame.</p>
@@ -211,8 +211,8 @@
 
   <section class="section" id="demos">
     <div class="container">
-      <h2 class="section-title">Demos &amp; Downloads</h2>
-      <p class="section-lede">These run in place &mdash; no install, no download, just a link. All three are built on Three.js.</p>
+      <h2 class="section-title">Demos &amp; Games</h2>
+      <p class="section-lede">Everything here runs in place &mdash; no install, no download, just a link.</p>
       <div class="demo-grid">
 
         <a class="demo-card available" href="https://d1.redmarmosetstudios.com" target="_blank" rel="noopener">
@@ -236,8 +236,15 @@
           <span class="demo-badge ready">Play now &rarr;</span>
         </a>
 
+        <a class="demo-card available" href="https://senet.redmarmosetstudios.com" target="_blank" rel="noopener">
+          <p class="demo-meta">Browser &middot; No framework</p>
+          <h3>Senet</h3>
+          <p>The oldest known board game, playable online. Seven AI tiers using an opening book and Monte Carlo tree search, peer-to-peer multiplayer over WebRTC, a Discord Activity, 19 interactive lessons and a rated leaderboard. Hand-written ES modules &mdash; no Three.js, no framework.</p>
+          <span class="demo-badge ready">Play now &rarr;</span>
+        </a>
+
       </div>
-      <p class="demo-note">Also in the browser, without Three.js: <a href="https://senet.redmarmosetstudios.com" target="_blank" rel="noopener">Senet</a> &mdash; an ancient Egyptian board game with Monte Carlo tree search AI and peer-to-peer multiplayer over WebRTC. Or read the renderer behind this page on <a href="https://github.com/semiessessi/cv/blob/main/script.js" target="_blank" rel="noopener">GitHub</a>.</p>
+      <p class="demo-note">The first three are built on Three.js; Senet is plain ES modules. You can also read the renderer behind this page on <a href="https://github.com/semiessessi/cv/blob/main/script.js" target="_blank" rel="noopener">GitHub</a>.</p>
     </div>
   </section>
 

@@ -1239,3 +1239,67 @@ ul {
 .project-card:hover .project-cta {
   text-decoration: underline;
 }
+
+/* Section background alternation on the engine sub-pages */
+.section-alt {
+  background: var(--surface);
+}
+
+/* Shipped title credits */
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.credit-card {
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-pixel);
+  padding: 20px 22px;
+  transition: all var(--transition);
+}
+
+.credit-card:hover {
+  border-color: var(--page-accent, var(--accent));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+}
+
+.credit-year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--page-accent, var(--accent));
+  letter-spacing: 0.04em;
+}
+
+.credit-card h3 {
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin: 6px 0 4px;
+}
+
+.credit-card h3 a:hover {
+  color: var(--page-accent, var(--accent));
+}
+
+.credit-meta {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+}
+
+.credit-role {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* A muted card for unannounced or cancelled work */
+.credit-card.muted {
+  border-style: dashed;
+  background: transparent;
+}
