@@ -1303,3 +1303,9 @@ ul {
   border-style: dashed;
   background: transparent;
 }
+
+/* The hero "Play Demos" button targets the first demo tile. This stacks on
+   top of the global scroll-padding-top, so keep it small. */
+#demos {
+  scroll-margin-top: 24px;
+}
