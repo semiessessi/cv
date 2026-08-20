@@ -52,6 +52,7 @@ document.querySelectorAll('.timeline-item').forEach(item => {
 
 (function () {
   const canvas = document.getElementById('hero-canvas');
+  if (!canvas) return;
   const gl = canvas.getContext('webgl', { antialias: false, alpha: false });
   if (!gl) return;
 

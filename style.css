@@ -932,3 +932,310 @@ ul {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========================================
+   Engine sub-pages (/native-engine, /unreal,
+   /unity, /threejs)
+   ======================================== */
+
+/* Per-page accent — used for eyebrows, badges and rules so the
+   sub-pages read as siblings rather than clones. */
+.page-native  { --page-accent: #00d4aa; }
+.page-unreal  { --page-accent: #5ec8ff; }
+.page-unity   { --page-accent: #ff6b6b; }
+.page-threejs { --page-accent: #ffcc00; }
+
+/* Compact hero band (same shader as the front page, shorter) */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.page-hero-bg canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.page-hero .container {
+  position: relative;
+  z-index: 1;
+  padding-top: 128px;
+  padding-bottom: 72px;
+}
+
+.page-hero-card {
+  max-width: 760px;
+  padding: 36px 40px;
+  background: rgba(10, 10, 15, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(108, 99, 255, 0.14);
+  border-radius: var(--radius);
+  box-shadow: 0 0 60px rgba(108, 99, 255, 0.06),
+              inset 0 0 40px rgba(10, 10, 15, 0.3);
+}
+
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  transition: color var(--transition);
+}
+
+.breadcrumb:hover {
+  color: var(--page-accent, var(--accent));
+}
+
+.page-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--page-accent, var(--accent));
+  margin-bottom: 10px;
+}
+
+.page-title {
+  font-family: 'Upheaval', var(--font-pixel);
+  font-size: clamp(2.1rem, 6vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff 0%, #c8c8d8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.page-lede {
+  color: var(--text);
+  font-size: 1rem;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+.page-hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-accent {
+  background: transparent;
+  color: var(--page-accent, var(--accent));
+  border: 1px solid currentColor;
+}
+
+.btn-accent:hover {
+  background: rgba(255, 255, 255, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Generic auto-fitting card grid, reuses .project-card styling */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card-grid.grid-2,
+.demo-grid.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.card-grid .project-card:hover {
+  border-color: var(--page-accent, var(--border-light));
+}
+
+.card-grid .project-card::before {
+  background: linear-gradient(135deg, var(--accent), var(--page-accent, var(--accent-secondary)));
+}
+
+/* Key-fact strip */
+.fact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 56px;
+}
+
+.fact-grid .stat-card:hover {
+  border-color: var(--page-accent, var(--accent));
+}
+
+.section-lede {
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: -32px 0 32px;
+  font-size: 0.95rem;
+}
+
+/* Demos & downloads */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.demo-card {
+  position: relative;
+  background: var(--bg-card);
+  border: 2px dashed var(--border-light);
+  border-radius: var(--radius-pixel);
+  padding: 28px;
+  transition: all var(--transition);
+}
+
+/* Add .available to a demo card once a real download link is in place */
+.demo-card.available {
+  border-style: solid;
+}
+
+.demo-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--page-accent, var(--accent));
+}
+
+.demo-card h3 {
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  letter-spacing: 0.02em;
+}
+
+.demo-card p {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 16px;
+}
+
+.demo-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-bottom: 12px;
+}
+
+.demo-badge {
+  display: inline-block;
+  font-family: var(--font-pixel);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: var(--radius-pixel);
+  background: rgba(255, 204, 0, 0.12);
+  color: #ffcc00;
+  border: 1px solid rgba(255, 204, 0, 0.3);
+}
+
+.demo-badge.ready {
+  background: rgba(0, 212, 170, 0.12);
+  color: var(--accent-secondary);
+  border-color: rgba(0, 212, 170, 0.35);
+}
+
+.demo-card.available .demo-badge.ready {
+  transition: all var(--transition);
+}
+
+.demo-card.available:hover .demo-badge.ready {
+  background: rgba(0, 212, 170, 0.22);
+  border-color: var(--accent-secondary);
+}
+
+.demo-note {
+  margin-top: 28px;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.demo-note a {
+  color: var(--page-accent, var(--accent));
+}
+
+/* Cross-links between the engine pages */
+.engine-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.engine-nav a {
+  font-family: var(--font-pixel);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  padding: 12px 22px;
+  background: var(--bg-card);
+  border: 2px solid var(--border);
+  border-radius: var(--radius-pixel);
+  color: var(--text-muted);
+  transition: all var(--transition);
+}
+
+.engine-nav a:hover {
+  color: var(--text);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.engine-nav a[aria-current='page'] {
+  color: var(--page-accent, var(--accent));
+  border-color: currentColor;
+}
+
+.engine-outro {
+  text-align: center;
+}
+
+.engine-outro .section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+  .card-grid.grid-2,
+  .demo-grid.grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .page-hero-card {
+    padding: 28px 24px;
+  }
+
+  .page-hero .container {
+    padding-top: 104px;
+    padding-bottom: 56px;
+  }
+
+  .fact-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-card .project-cta {
+  display: inline-block;
+  margin-top: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--page-accent, var(--accent));
+}
+
+.project-card:hover .project-cta {
+  text-decoration: underline;
+}

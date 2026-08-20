@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Native Engine Experience &mdash; Sem Essessi</title>
+  <meta name="description" content="Custom C++ game engine and native graphics experience: renderers, engine architecture, physics, tooling and optimisation across console, desktop and mobile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>@font-face{font-family:'Upheaval';src:url('../assets/upheavtt.ttf') format('truetype');font-display:swap;}</style>
+</head>
+<body class="page-native">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SE</a>
+      <div class="nav-links">
+        <a href="../index.html">CV</a>
+        <a href="../native-engine/">Native</a>
+        <a href="../unreal/">Unreal</a>
+        <a href="../unity/">Unity</a>
+        <a href="../threejs/">Three.js</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-bg">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="container">
+      <div class="page-hero-card">
+        <a href="../index.html" class="breadcrumb">&larr; Back to CV</a>
+        <p class="page-eyebrow">Engine Experience</p>
+        <h1 class="page-title">Native Engines</h1>
+        <p class="page-lede">Engines written from the ground up in C and C++ &mdash; renderers, resource pipelines, physics integration, platform layers and the tools around them. 28+ years of C++, shipped on consoles, desktop, mobile and VR.</p>
+        <div class="page-hero-actions">
+          <a href="#demos" class="btn btn-primary">Demos &amp; Downloads</a>
+          <a href="#work" class="btn btn-accent">Selected Work</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="fact-grid">
+        <div class="stat-card">
+          <span class="stat-number">28+</span>
+          <span class="stat-label">Years with C++</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">7</span>
+          <span class="stat-label">Platform Families</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">AAA</span>
+          <span class="stat-label">Console Engine Work</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">GLToy</span>
+          <span class="stat-label">Own Engine</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">What I Build</h2>
+      <div class="card-grid">
+
+        <div class="project-card">
+          <div class="project-icon">&#127912;</div>
+          <h3>Rendering</h3>
+          <p>Renderer architecture and graphics features from the API up &mdash; OpenGL, Direct3D and console-native pipelines. Dynamic lighting, special effects, post-processing chains and shader authoring in HLSL and GLSL.</p>
+          <div class="project-tags">
+            <span>OpenGL</span><span>Direct3D</span><span>HLSL</span><span>GLSL</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#129513;</div>
+          <h3>Engine Architecture</h3>
+          <p>Subsystem and module design, asset and resource pipelines, serialisation, memory management, and the platform abstraction layers that keep one codebase running on very different hardware.</p>
+          <div class="project-tags">
+            <span>C++</span><span>Systems</span><span>Cross-platform</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#9889;</div>
+          <h3>Performance</h3>
+          <p>Optimisation under shipping deadlines &mdash; including a whole-codebase pass across the final eight weeks of Bodycount. Visible surface determination, draw call reduction, cache-aware data layout and GPU profiling.</p>
+          <div class="project-tags">
+            <span>Profiling</span><span>VSD</span><span>Memory</span><span>GPU</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#127760;</div>
+          <h3>Physics &amp; Maths</h3>
+          <p>Physics integration, collision and simulation, plus the mathematics underneath it &mdash; implicit surfaces, procedural generation and numerical methods. Maths and physics are the hobby as well as the job.</p>
+          <div class="project-tags">
+            <span>Physics</span><span>Procedural</span><span>Maths</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128736;</div>
+          <h3>Native Applications</h3>
+          <p>Native work well beyond games: compositing software at The Foundry, an infinite-canvas drawing renderer at Mischief, data profiling tooling in MFC/ATL/WTL, and native iOS and Android layers.</p>
+          <div class="project-tags">
+            <span>NUKE</span><span>Mischief</span><span>MFC/ATL/WTL</span><span>Objective-C</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128421;</div>
+          <h3>Platforms</h3>
+          <p>Windows 3.1 through 11, most console generations, Linux, Mac OS X, iOS, Android and various VR headsets &mdash; including bring-up and early tech work on then-unreleased hardware.</p>
+          <div class="project-tags">
+            <span>Console</span><span>Desktop</span><span>Mobile</span><span>VR</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section experience" id="work">
+    <div class="container">
+      <h2 class="section-title">Selected Work</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker current"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>New Game Engine</h3>
+                <p class="timeline-company">Personal / Red Marmoset Studios</p>
+              </div>
+              <span class="timeline-date">Current</span>
+            </div>
+            <ul class="timeline-details">
+              <li>A new engine built from scratch, alongside generative AI tooling and language compiler work</li>
+              <li>Modern C++, with rendering and tooling designed around fast iteration</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>GLToy</h3>
+                <p class="timeline-company">Personal engine project</p>
+              </div>
+              <span class="timeline-date">Long-running</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Cross-platform C++ game engine with advanced rendering, physics integration and dynamic lighting</li>
+              <li>Written and maintained as a personal project &mdash; the sandbox where engine ideas get tried first</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Senior Software Developer &ndash; NUKE</h3>
+                <p class="timeline-company">The Foundry</p>
+              </div>
+              <span class="timeline-date">Feb 2016 &ndash; Jan 2017</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Native C++ development on NUKE, an industry-standard compositing application</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Senior Software Engineer</h3>
+                <p class="timeline-company">Made With Mischief, Inc.</p>
+              </div>
+              <span class="timeline-date">Jun 2014 &ndash; Feb 2016</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Mischief &mdash; an innovative infinite canvas drawing application built on custom native rendering technology</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Programmer</h3>
+                <p class="timeline-company">Escapist Games Limited</p>
+              </div>
+              <span class="timeline-date">Nov 2011 &ndash; Apr 2013</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Programming across all disciplines on custom tech &mdash; audio, rendering, networking, systems, gameplay and UI</li>
+              <li>Star Chart &mdash; augmented reality stargazing app for iOS, Android and Windows 8</li>
+              <li>Pogo Guy &mdash; 2D procedural platform game for Mac OS X and iOS</li>
+              <li>Wrote articles on planetary rendering and atmospheric effects for Intel Software Adrenaline</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Experienced Programmer</h3>
+                <p class="timeline-company">Codemasters</p>
+              </div>
+              <span class="timeline-date">Nov 2010 &ndash; Nov 2011</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Design and implementation of graphics and special effects in an in-house AAA engine</li>
+              <li>Visible surface determination solution for Bodycount</li>
+              <li>Optimisation across the whole codebase during the last 8 weeks of the Bodycount project</li>
+              <li>Early tech work on future platforms for other Codemasters projects</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Junior Programmer</h3>
+                <p class="timeline-company">Rebellion</p>
+              </div>
+              <span class="timeline-date">May 2009 &ndash; Mar 2010</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Graphics, special effects and gameplay code on PC, Xbox 360 and PS3 using C++ and shader languages</li>
+              <li>Implementing in-house engine features and fixes for Rogue Warrior, Aliens vs. Predator and NeverDead</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demos">
+    <div class="container">
+      <h2 class="section-title">Demos &amp; Downloads</h2>
+      <p class="section-lede">Builds and sample projects from the engine work above. These aren't up yet &mdash; check back soon.</p>
+      <div class="demo-grid">
+
+        <!-- To publish a demo: give the card a real link, swap the badge for
+             <span class="demo-badge ready">Download</span> and add class "available".
+             e.g. <a class="demo-card available" href="downloads/gltoy-demo.zip"> ... </a> -->
+        <div class="demo-card">
+          <p class="demo-meta">Windows &middot; x64</p>
+          <h3>GLToy Tech Demo</h3>
+          <p>A standalone build showing the renderer, dynamic lighting and physics integration running in the engine.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-meta">Windows &middot; Linux</p>
+          <h3>Renderer Sandbox</h3>
+          <p>Scene and shader sandbox for poking at the lighting and post-processing pipeline interactively.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-meta">Source &middot; C++</p>
+          <h3>Sample Source</h3>
+          <p>Annotated extracts from the engine &mdash; the pieces that are most useful to read rather than run.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+      </div>
+      <p class="demo-note">Want a look sooner? <a href="../index.html#contact">Get in touch</a> and I can share builds directly.</p>
+    </div>
+  </section>
+
+  <section class="section engine-outro">
+    <div class="container">
+      <h2 class="section-title">Other Engines</h2>
+      <nav class="engine-nav">
+        <a href="../native-engine/" aria-current="page">Native Engine</a>
+        <a href="../unreal/">Unreal Engine</a>
+        <a href="../unity/">Unity</a>
+        <a href="../threejs/">Three.js &amp; WebGL</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Semi Essessi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
