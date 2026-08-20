@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three.js &amp; WebGL Experience &mdash; Sem Essessi</title>
+  <meta name="description" content="Three.js and WebGL experience: hand-written browser renderers, GLSL shaders, raymarching and post-processing pipelines running with no dependencies.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>@font-face{font-family:'Upheaval';src:url('../assets/upheavtt.ttf') format('truetype');font-display:swap;}</style>
+</head>
+<body class="page-threejs">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SE</a>
+      <div class="nav-links">
+        <a href="../index.html">CV</a>
+        <a href="../native-engine/">Native</a>
+        <a href="../unreal/">Unreal</a>
+        <a href="../unity/">Unity</a>
+        <a href="../threejs/">Three.js</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-bg">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="container">
+      <div class="page-hero-card">
+        <a href="../index.html" class="breadcrumb">&larr; Back to CV</a>
+        <p class="page-eyebrow">Engine Experience</p>
+        <h1 class="page-title">Three.js &amp; WebGL</h1>
+        <p class="page-lede">Real-time 3D in the browser. Three.js sits on top of WebGL, and WebGL is graphics programming &mdash; which is where I have spent most of the last three decades. The animated surface behind this text is a raytracer I wrote by hand, running live on this page.</p>
+        <div class="page-hero-actions">
+          <a href="#demos" class="btn btn-primary">Demos &amp; Downloads</a>
+          <a href="#live" class="btn btn-accent">How This Page Works</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="fact-grid">
+        <div class="stat-card">
+          <span class="stat-number">WebGL</span>
+          <span class="stat-label">Hand-written Renderer</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">GLSL</span>
+          <span class="stat-label">Shaders From Scratch</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">7</span>
+          <span class="stat-label">Render Passes Per Frame</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">0</span>
+          <span class="stat-label">Dependencies</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">What I Bring To It</h2>
+      <div class="card-grid">
+
+        <div class="project-card">
+          <div class="project-icon">&#127760;</div>
+          <h3>The Layer Underneath</h3>
+          <p>Three.js is a friendly wrapper over WebGL. Buffers, framebuffers, texture state, draw calls and the GL state machine are the level I actually work at &mdash; so when the abstraction leaks, or a project needs something outside what it exposes, that is not a wall.</p>
+          <div class="project-tags">
+            <span>WebGL</span><span>OpenGL</span><span>State Machine</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#127912;</div>
+          <h3>Shader Authoring</h3>
+          <p>GLSL and HLSL written daily for years across engines and platforms. Custom materials, raymarching, procedural texturing and full post-processing chains rather than parameter tweaking.</p>
+          <div class="project-tags">
+            <span>GLSL</span><span>HLSL</span><span>Raymarching</span><span>Post FX</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128207;</div>
+          <h3>Graphics Maths</h3>
+          <p>Mathematics and physics are the hobby as well as the job &mdash; implicit surfaces, root finding, analytic normals, projections and numerical methods. The pieces of 3D that are maths problems wearing a rendering costume.</p>
+          <div class="project-tags">
+            <span>Maths</span><span>Implicit Surfaces</span><span>Numerics</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#9889;</div>
+          <h3>Browser Performance</h3>
+          <p>The browser is a constrained target: no threads to spare, integrated GPUs, wildly varying device pixel ratios. Same optimisation discipline as console work &mdash; measure, budget, cut.</p>
+          <div class="project-tags">
+            <span>Profiling</span><span>DPR Scaling</span><span>Frame Budget</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128241;</div>
+          <h3>Reach</h3>
+          <p>No install, no store, no certification &mdash; a link. Useful for demos, tools and visualisation, and a natural fit alongside the mobile and cross-platform delivery already in the CV.</p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>Cross-platform</span><span>Mobile Web</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128302;</div>
+          <h3>Visualisation</h3>
+          <p>Astronomical and scientific visualisation from Star Chart and Known Space, and creative tooling from Mischief and NUKE &mdash; the same problems, in a canvas element.</p>
+          <div class="project-tags">
+            <span>Dataviz</span><span>Astronomy</span><span>Creative Tools</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section experience" id="live">
+    <div class="container">
+      <h2 class="section-title">Live On This Page</h2>
+      <p class="section-lede">The background above is not a video or a library demo. It is a raytracer written in GLSL and plain WebGL, with no dependencies, rendering a Chmutov sextic surface in real time. Here is what happens every frame.</p>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker current"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>1. Ray Marching an Implicit Surface</h3>
+                <p class="timeline-company">Scene pass</p>
+              </div>
+              <span class="timeline-date">GLSL</span>
+            </div>
+            <ul class="timeline-details">
+              <li>The surface is the zero set of a Chebyshev polynomial evaluated in x, y and z &mdash; there is no mesh, no vertices and no geometry to load</li>
+              <li>A bounding box slab test skips empty space, then 80 steps look for a sign change, refined by 8 iterations of bisection</li>
+              <li>Normals come from central differences of the implicit function, shaded with two lights, Blinn-Phong specular, Fresnel and distance fog</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>2. Procedural Texturing</h3>
+                <p class="timeline-company">Scene pass</p>
+              </div>
+              <span class="timeline-date">GLSL</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Spherical UVs feed a hash-driven procedural texture &mdash; a grid, flickering offset squares and eight layers of animated bars</li>
+              <li>Every element is generated in the shader from a hash function, so there are no texture assets to download</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>3. Bloom Chain</h3>
+                <p class="timeline-company">Post-processing</p>
+              </div>
+              <span class="timeline-date">5 passes</span>
+            </div>
+            <ul class="timeline-details">
+              <li>The scene renders at half brightness into a framebuffer to keep headroom in an 8-bit target</li>
+              <li>A luminance bright-pass at half resolution, then two iterations of a separable 9-tap Gaussian blur &mdash; four passes for a wide, soft glow</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>4. Composite &amp; Tonemap</h3>
+                <p class="timeline-company">Final pass</p>
+              </div>
+              <span class="timeline-date">To screen</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Scene and bloom are combined, vignetted, tonemapped and gamma corrected on the way to the default framebuffer</li>
+              <li>Device pixel ratio is capped and an IntersectionObserver stops the whole chain when the canvas scrolls off screen &mdash; it costs nothing when you cannot see it</li>
+              <li><a href="https://github.com/semiessessi/cv/blob/main/script.js" target="_blank" rel="noopener">Read the source</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demos">
+    <div class="container">
+      <h2 class="section-title">Demos &amp; Downloads</h2>
+      <p class="section-lede">Browser demos run in place &mdash; no download, just a link. These aren't up yet, but the background above is a working preview of the kind of thing that will land here.</p>
+      <div class="demo-grid">
+
+        <!-- To publish a demo: give the card a real link, swap the badge for
+             <span class="demo-badge ready">Launch</span> and add class "available".
+             e.g. <a class="demo-card available" href="demos/raymarcher/"> ... </a> -->
+        <div class="demo-card">
+          <p class="demo-meta">Browser &middot; WebGL</p>
+          <h3>Raymarching Playground</h3>
+          <p>An interactive version of the surface above &mdash; change the polynomial, the shading and the bloom chain and watch it react.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-meta">Browser &middot; Three.js</p>
+          <h3>Scene Demo</h3>
+          <p>A Three.js scene with custom shader materials and a hand-rolled post-processing pass.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-meta">Source &middot; JavaScript</p>
+          <h3>Sample Source</h3>
+          <p>Commented source for the demos, worth reading whether or not you run them.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+      </div>
+      <p class="demo-note">Curious before then? <a href="../index.html#contact">Get in touch</a>, or read the renderer behind this page on <a href="https://github.com/semiessessi/cv/blob/main/script.js" target="_blank" rel="noopener">GitHub</a>.</p>
+    </div>
+  </section>
+
+  <section class="section engine-outro">
+    <div class="container">
+      <h2 class="section-title">Other Engines</h2>
+      <nav class="engine-nav">
+        <a href="../native-engine/">Native Engine</a>
+        <a href="../unreal/">Unreal Engine</a>
+        <a href="../unity/">Unity</a>
+        <a href="../threejs/" aria-current="page">Three.js &amp; WebGL</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Semi Essessi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unreal Engine Experience &mdash; Sem Essessi</title>
+  <meta name="description" content="Unreal Engine experience: UE4 C++ and Blueprint work on VR titles including Phantom: Covert Ops, plus PSVR and location-based entertainment prototyping at nDreams.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Silkscreen&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>@font-face{font-family:'Upheaval';src:url('../assets/upheavtt.ttf') format('truetype');font-display:swap;}</style>
+</head>
+<body class="page-unreal">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">SE</a>
+      <div class="nav-links">
+        <a href="../index.html">CV</a>
+        <a href="../native-engine/">Native</a>
+        <a href="../unreal/">Unreal</a>
+        <a href="../unity/">Unity</a>
+        <a href="../threejs/">Three.js</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="page-hero-bg">
+      <canvas id="hero-canvas"></canvas>
+    </div>
+    <div class="container">
+      <div class="page-hero-card">
+        <a href="../index.html" class="breadcrumb">&larr; Back to CV</a>
+        <p class="page-eyebrow">Engine Experience</p>
+        <h1 class="page-title">Unreal Engine</h1>
+        <p class="page-lede">Senior programmer on UE4 VR projects at nDreams &mdash; shipped work on Phantom: Covert Ops, plus pitch and early project development for PSVR and location-based entertainment titles.</p>
+        <div class="page-hero-actions">
+          <a href="#demos" class="btn btn-primary">Demos &amp; Downloads</a>
+          <a href="#work" class="btn btn-accent">Selected Work</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <div class="fact-grid">
+        <div class="stat-card">
+          <span class="stat-number">UE4</span>
+          <span class="stat-label">Engine Version</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">VR</span>
+          <span class="stat-label">Primary Focus</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">PSVR</span>
+          <span class="stat-label">Shipped Platform</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">LBE</span>
+          <span class="stat-label">Out-of-Home VR</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">What I Bring To It</h2>
+      <div class="card-grid">
+
+        <div class="project-card">
+          <div class="project-icon">&#129504;</div>
+          <h3>Engine-Level C++</h3>
+          <p>Unreal is a large C++ codebase, and I treat it like one. Nearly three decades of C++ means reading and modifying engine source is routine rather than a last resort when a feature needs to go deeper than Blueprints allow.</p>
+          <div class="project-tags">
+            <span>C++</span><span>Engine Source</span><span>Gameplay Framework</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#129405;</div>
+          <h3>VR Development</h3>
+          <p>UE4 VR work across PSVR and location-based entertainment &mdash; the domain where comfort, presence and a hard frame budget dictate the design as much as the design does.</p>
+          <div class="project-tags">
+            <span>PSVR</span><span>LBE</span><span>Comfort</span><span>Presence</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#9889;</div>
+          <h3>Performance Budgets</h3>
+          <p>VR is the least forgiving performance target there is. A background in AAA console optimisation &mdash; graphics, visible surface determination and whole-codebase profiling passes &mdash; transfers directly.</p>
+          <div class="project-tags">
+            <span>Profiling</span><span>Frame Budget</span><span>Optimisation</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128302;</div>
+          <h3>Prototyping &amp; Pitches</h3>
+          <p>Pitch and early project work &mdash; taking a concept to something playable and honest about its technical risks, fast enough that the answer still matters.</p>
+          <div class="project-tags">
+            <span>Prototyping</span><span>Blueprint</span><span>Pre-production</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#127912;</div>
+          <h3>Graphics &amp; Shaders</h3>
+          <p>Materials, shader authoring and rendering features, informed by years of writing renderers from scratch rather than only configuring someone else's.</p>
+          <div class="project-tags">
+            <span>Materials</span><span>HLSL</span><span>Rendering</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-icon">&#128421;</div>
+          <h3>Console Shipping</h3>
+          <p>Console development from the Xbox 360 and PS3 era onwards &mdash; certification realities, platform constraints and the last mile of getting a build out the door.</p>
+          <div class="project-tags">
+            <span>PlayStation</span><span>Xbox</span><span>PC</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section experience" id="work">
+    <div class="container">
+      <h2 class="section-title">Selected Work</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Senior Programmer</h3>
+                <p class="timeline-company">nDreams</p>
+              </div>
+              <span class="timeline-date">Feb 2019 &ndash; Feb 2020</span>
+            </div>
+            <ul class="timeline-details">
+              <li>Work on Phantom: Covert Ops &mdash; a VR stealth title built on UE4</li>
+              <li>Pitch and early project work with UE4 for location-based entertainment and PSVR games</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>Phantom: Covert Ops</h3>
+                <p class="timeline-company">nDreams &middot; UE4</p>
+              </div>
+              <span class="timeline-date">Shipped 2020</span>
+            </div>
+            <ul class="timeline-details">
+              <li>VR stealth-action title in which the entire game is played from a kayak</li>
+              <li>Released across Meta Quest, Rift and PSVR</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="demos">
+    <div class="container">
+      <h2 class="section-title">Demos &amp; Downloads</h2>
+      <p class="section-lede">Playable Unreal builds and sample projects. Not up yet &mdash; check back soon.</p>
+      <div class="demo-grid">
+
+        <!-- To publish a demo: give the card a real link, swap the badge for
+             <span class="demo-badge ready">Download</span> and add class "available".
+             e.g. <a class="demo-card available" href="downloads/vr-prototype.zip"> ... </a> -->
+        <div class="demo-card">
+          <p class="demo-meta">Windows &middot; PC VR</p>
+          <h3>VR Prototype Build</h3>
+          <p>A packaged UE4 VR sample covering locomotion, interaction and the frame budget work that keeps it comfortable.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-meta">Windows &middot; x64</p>
+          <h3>Rendering Experiment</h3>
+          <p>Custom materials and rendering features running inside Unreal, packaged as a standalone build.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+        <div class="demo-card">
+          <p class="demo-meta">Source &middot; .uproject</p>
+          <h3>Sample Project</h3>
+          <p>An openable project showing how the C++ and Blueprint sides are structured on a real codebase.</p>
+          <span class="demo-badge">Coming soon</span>
+        </div>
+
+      </div>
+      <p class="demo-note">Want a look sooner? <a href="../index.html#contact">Get in touch</a> and I can share builds directly.</p>
+    </div>
+  </section>
+
+  <section class="section engine-outro">
+    <div class="container">
+      <h2 class="section-title">Other Engines</h2>
+      <nav class="engine-nav">
+        <a href="../native-engine/">Native Engine</a>
+        <a href="../unreal/" aria-current="page">Unreal Engine</a>
+        <a href="../unity/">Unity</a>
+        <a href="../threejs/">Three.js &amp; WebGL</a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Semi Essessi. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
