@@ -1239,7 +1239,3 @@ ul {
 .project-card:hover .project-cta {
   text-decoration: underline;
 }
-
-.demos {
-  background: var(--surface);
-}
