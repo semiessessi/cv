@@ -40,7 +40,7 @@
         <h1 class="page-title">Three.js &amp; WebGL</h1>
         <p class="page-lede">Real-time 3D in the browser. Three.js sits on top of WebGL, and WebGL is graphics programming &mdash; which is where I have spent most of the last three decades. The animated surface behind this text is a raytracer I wrote by hand, running live on this page.</p>
         <div class="page-hero-actions">
-          <a href="#demos" class="btn btn-primary">Demos &amp; Downloads</a>
+          <a href="#demos" class="btn btn-primary">Play the Demos</a>
           <a href="#live" class="btn btn-accent">How This Page Works</a>
         </div>
       </div>
@@ -212,35 +212,32 @@
   <section class="section" id="demos">
     <div class="container">
       <h2 class="section-title">Demos &amp; Downloads</h2>
-      <p class="section-lede">Browser demos run in place &mdash; no download, just a link. These aren't up yet, but the background above is a working preview of the kind of thing that will land here.</p>
+      <p class="section-lede">These run in place &mdash; no install, no download, just a link. All three are built on Three.js.</p>
       <div class="demo-grid">
 
-        <!-- To publish a demo: give the card a real link, swap the badge for
-             <span class="demo-badge ready">Launch</span> and add class "available".
-             e.g. <a class="demo-card available" href="demos/raymarcher/"> ... </a> -->
-        <div class="demo-card">
-          <p class="demo-meta">Browser &middot; WebGL</p>
-          <h3>Raymarching Playground</h3>
-          <p>An interactive version of the surface above &mdash; change the polynomial, the shading and the bloom chain and watch it react.</p>
-          <span class="demo-badge">Coming soon</span>
-        </div>
-
-        <div class="demo-card">
+        <a class="demo-card available" href="https://d1.redmarmosetstudios.com" target="_blank" rel="noopener">
           <p class="demo-meta">Browser &middot; Three.js</p>
-          <h3>Scene Demo</h3>
-          <p>A Three.js scene with custom shader materials and a hand-rolled post-processing pass.</p>
-          <span class="demo-badge">Coming soon</span>
-        </div>
+          <h3>Hedron Yard</h3>
+          <p>A real-time scene you can fly around &mdash; polyhedra, moving lights and an FPS overlay, with a chiptune soundtrack. WASD to fly, drag to look, Tab for the controls panel.</p>
+          <span class="demo-badge ready">Play now &rarr;</span>
+        </a>
 
-        <div class="demo-card">
-          <p class="demo-meta">Source &middot; JavaScript</p>
-          <h3>Sample Source</h3>
-          <p>Commented source for the demos, worth reading whether or not you run them.</p>
-          <span class="demo-badge">Coming soon</span>
-        </div>
+        <a class="demo-card available" href="https://d2.redmarmosetstudios.com" target="_blank" rel="noopener">
+          <p class="demo-meta">Browser &middot; Three.js</p>
+          <h3>SA-43: Hammerhead</h3>
+          <p>Six-degree-of-freedom flight combat in an endo/exo-atmospheric attack craft. Pitch, yaw and roll, a weapon menu, target locking and an eject button. Gamepad supported.</p>
+          <span class="demo-badge ready">Play now &rarr;</span>
+        </a>
+
+        <a class="demo-card available" href="https://sdd.redmarmosetstudios.com" target="_blank" rel="noopener">
+          <p class="demo-meta">Browser &middot; Three.js &middot; In development</p>
+          <h3>Voidbound</h3>
+          <p>A space sandbox in progress &mdash; a block-based ship builder with saveable prefabs, asteroids to work, multiple camera rigs, and a rendering stack that runs to star fields and black holes.</p>
+          <span class="demo-badge ready">Play now &rarr;</span>
+        </a>
 
       </div>
-      <p class="demo-note">Curious before then? <a href="../index.html#contact">Get in touch</a>, or read the renderer behind this page on <a href="https://github.com/semiessessi/cv/blob/main/script.js" target="_blank" rel="noopener">GitHub</a>.</p>
+      <p class="demo-note">Also in the browser, without Three.js: <a href="https://senet.redmarmosetstudios.com" target="_blank" rel="noopener">Senet</a> &mdash; an ancient Egyptian board game with Monte Carlo tree search AI and peer-to-peer multiplayer over WebRTC. Or read the renderer behind this page on <a href="https://github.com/semiessessi/cv/blob/main/script.js" target="_blank" rel="noopener">GitHub</a>.</p>
     </div>
   </section>
 
