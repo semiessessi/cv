@@ -83,7 +83,7 @@
         <div class="project-card">
           <div class="project-icon">&#127912;</div>
           <h3>Shader Authoring</h3>
-          <p>GLSL and HLSL written daily for years across engines and platforms. Custom materials, raymarching, procedural texturing and full post-processing chains rather than parameter tweaking.</p>
+          <p>GLSL and HLSL written regularly for years across engines and platforms. Custom materials, raymarching, procedural texturing and full post-processing chains rather than parameter tweaking.</p>
           <div class="project-tags">
             <span>GLSL</span><span>HLSL</span><span>Raymarching</span><span>Post FX</span>
           </div>
@@ -226,7 +226,8 @@
               <span class="timeline-date">Three.js</span>
             </div>
             <ul class="timeline-details">
-              <li>A real-time scene you fly around &mdash; polyhedra and moving lights, WASD to fly, drag to look, Tab for the controls panel</li>
+              <li>A raytraced scene you fly around &mdash; 2,400 polyhedra lit by roughly 96,000 lights, 40 to an object, with WASD to fly, drag to look and Tab for the controls panel</li>
+              <li>Shadows and reflections are traced, not faked: no shadow maps, no reflection probes. Each object carries its own lists &mdash; up to 32 lights bathing it, 16 of those casting shadows, and 26 reflection neighbours for the polished, low-roughness materials</li>
               <li>An orbit-camera toggle and a live stats overlay sit on top of the scene</li>
               <li>A chiptune soundtrack with a real transport &mdash; play and pause, scrubbing, volume, mute and per-track notes</li>
               <li>Ships as a bundled ES module build: one page, no install, no store</li>
@@ -286,7 +287,7 @@
         <a class="demo-card available" href="https://d1.redmarmosetstudios.com" target="_blank" rel="noopener">
           <p class="demo-meta">Browser &middot; Three.js</p>
           <h3>Graphics Demo</h3>
-          <p>Hedron Yard &mdash; a real-time scene you can fly around, with polyhedra, moving lights and an FPS overlay over a chiptune soundtrack. WASD to fly, drag to look, Tab for the controls panel.</p>
+          <p>Hedron Yard &mdash; a raytraced scene you can fly around, with 2,400 polyhedra, some 96,000 lights, traced shadows and reflections, and an FPS overlay over a chiptune soundtrack. WASD to fly, drag to look, Tab for the controls panel.</p>
           <span class="demo-badge ready">Play now &rarr;</span>
         </a>
 
