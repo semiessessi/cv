@@ -146,9 +146,9 @@
               <span class="timeline-date">GLSL</span>
             </div>
             <ul class="timeline-details">
-              <li>The surface is the zero set of a Chebyshev polynomial evaluated in x, y and z &mdash; there is no mesh, no vertices and no geometry to load</li>
-              <li>A bounding box slab test skips empty space, then 80 steps look for a sign change, refined by 8 iterations of bisection</li>
-              <li>Normals come from central differences of the implicit function, shaded with two lights, Blinn-Phong specular, Fresnel and distance fog</li>
+              <li>The surface is the Chmutov sextic &mdash; the zero isosurface of the scalar field T<sub>6</sub>(x) + T<sub>6</sub>(y) + T<sub>6</sub>(z), where T<sub>6</sub> is the sixth Chebyshev polynomial of the first kind. There is no mesh, no vertices and no geometry to load</li>
+              <li>A bounding box slab test skips empty space, then 80 fixed steps sample the field looking for a sign change. It is not a distance field, so a crossing is bracketed rather than sphere traced, then refined by 8 iterations of bisection</li>
+              <li>Normals come from central differences of the field &mdash; its gradient at the hit point &mdash; shaded with two lights, Blinn-Phong specular, Fresnel and distance fog</li>
             </ul>
           </div>
         </div>
