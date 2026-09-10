@@ -930,7 +930,7 @@ a.project-card:hover h3 {
 
 /* ========================================
    Engine sub-pages (/native-engine, /unreal,
-   /unity, /threejs)
+   /unity, /web)
    ======================================== */
 
 /* Per-page accent — used for eyebrows, badges and rules so the
@@ -938,7 +938,7 @@ a.project-card:hover h3 {
 .page-native  { --page-accent: #00d4aa; }
 .page-unreal  { --page-accent: #5ec8ff; }
 .page-unity   { --page-accent: #ff6b6b; }
-.page-threejs { --page-accent: #ffcc00; }
+.page-web     { --page-accent: #ffcc00; }
 
 /* Compact hero band (same shader as the front page, shorter) */
 .page-hero {
