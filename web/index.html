@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web &amp; Browser Experience &mdash; Sem Essessi</title>
-  <meta name="description" content="Web and browser work: real-time 3D and games that run from a link &mdash; WebGL and GLSL, Three.js, peer-to-peer multiplayer over WebRTC, and the raytraced background on this page.">
+  <meta name="description" content="Web and browser work: real-time 3D and games that run from a link &mdash; WebGL and GLSL, Three.js, WebGPU compute, Web Workers, peer-to-peer multiplayer over WebRTC, and the raytraced background on this page.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Silkscreen&display=swap" rel="stylesheet">
@@ -76,7 +76,7 @@
           <h3>The Layer Underneath</h3>
           <p>Three.js is a friendly wrapper over WebGL. Buffers, framebuffers, texture state, draw calls and the GL state machine are the level I actually work at &mdash; so when the abstraction leaks, or a project needs something outside what it exposes, that is not a wall.</p>
           <div class="project-tags">
-            <span>WebGL</span><span>OpenGL</span><span>State Machine</span>
+            <span>WebGL</span><span>WebGPU</span><span>OpenGL</span><span>State Machine</span>
           </div>
         </div>
 
@@ -101,9 +101,9 @@
         <div class="project-card">
           <div class="project-icon">&#9889;</div>
           <h3>Browser Performance</h3>
-          <p>The browser is a constrained target: no threads to spare, integrated GPUs, wildly varying device pixel ratios. Same optimisation discipline as console work &mdash; measure, budget, cut.</p>
+          <p>The browser is a constrained target: one main thread, integrated GPUs, wildly varying device pixel ratios. Heavy work goes off that thread into Web Workers, or onto the GPU as WebGPU compute where it fits. Same optimisation discipline as console work &mdash; measure, budget, cut.</p>
           <div class="project-tags">
-            <span>Profiling</span><span>DPR Scaling</span><span>Frame Budget</span>
+            <span>Web Workers</span><span>WebGPU</span><span>DPR Scaling</span><span>Frame Budget</span>
           </div>
         </div>
 
@@ -211,8 +211,8 @@
 
   <section class="section" id="breakdowns">
     <div class="container">
-      <h2 class="section-title">The Other Three</h2>
-      <p class="section-lede">What is actually running in each of the playable projects below. Like the background above, all three are AI-assisted builds.</p>
+      <h2 class="section-title">The Other Four</h2>
+      <p class="section-lede">What is actually running in each of the playable projects below. Like the background above, all four are AI-assisted builds.</p>
       <div class="timeline">
 
         <div class="timeline-item">
@@ -228,6 +228,7 @@
             <ul class="timeline-details">
               <li>A raytraced scene you fly around &mdash; 2,400 polyhedra lit by roughly 96,000 lights, 40 to an object, with WASD to fly, drag to look and Tab for the controls panel</li>
               <li>Shadows and reflections are traced, not faked: no shadow maps, no reflection probes. Each object carries its own lists &mdash; up to 32 lights bathing it, 16 of those casting shadows, and 26 reflection neighbours for the polished, low-roughness materials</li>
+              <li>The scene is built in parallel across Web Workers, one per core up to eight, so the packing and light assignment never block the main thread</li>
               <li>An orbit-camera toggle and a live stats overlay sit on top of the scene</li>
               <li>A chiptune soundtrack with a real transport &mdash; play and pause, scrubbing, volume, mute and per-track notes</li>
               <li>Ships as a bundled ES module build: one page, no install, no store</li>
@@ -250,6 +251,24 @@
               <li>A weapon menu, target locking and an eject button, with gamepad support alongside mouse and keyboard</li>
               <li>Peer-to-peer networking over WebRTC, so sessions connect browser to browser instead of through a game server</li>
               <li>Stats overlay and credits screen in-page; bundled ES modules, nothing to download</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div>
+                <h3>We Have A Problem!</h3>
+                <p class="timeline-company">whap.redmarmosetstudios.com</p>
+              </div>
+              <span class="timeline-date">WebGPU</span>
+            </div>
+            <ul class="timeline-details">
+              <li>A space sandbox in progress &mdash; a block-based ship builder with saveable prefabs, asteroids to work, multiple camera rigs, and a rendering stack that runs to star fields and black holes</li>
+              <li>WebGPU does the compute: adapter and limits are probed at startup, WGSL compute pipelines are dispatched for the heavy passes, and there is a fallback path for browsers without it</li>
+              <li>Web Workers carry the rest off the main thread &mdash; chunk meshing, ship meshing, surface field evaluation, texture packing and saving each run in their own worker</li>
             </ul>
           </div>
         </div>
@@ -299,9 +318,9 @@
         </a>
 
         <a class="demo-card available" href="https://whap.redmarmosetstudios.com" target="_blank" rel="noopener">
-          <p class="demo-meta">Browser &middot; Three.js &middot; In development</p>
+          <p class="demo-meta">Browser &middot; Three.js &middot; WebGPU &middot; In development</p>
           <h3>We Have A Problem!</h3>
-          <p>A space sandbox in progress &mdash; a block-based ship builder with saveable prefabs, asteroids to work, multiple camera rigs, and a rendering stack that runs to star fields and black holes.</p>
+          <p>A space sandbox in progress &mdash; a block-based ship builder with saveable prefabs, asteroids to work, multiple camera rigs, and a rendering stack that runs to star fields and black holes. WebGPU compute and Web Workers underneath.</p>
           <span class="demo-badge ready">Play now &rarr;</span>
         </a>
 
